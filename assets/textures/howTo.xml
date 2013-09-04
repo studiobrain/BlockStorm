@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:26661fc0e1819f504c840f4265f1cc4a$ -->
+<TextureAtlas imagePath="howTo.png">
+    <SubTexture name="menuBG" x="2" y="2" width="688" height="514" frameX="-57" frameY="-41" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="nextArrow" x="982" y="31" width="10" height="27"/>
+    <SubTexture name="nextArrowOvr" x="1008" y="2" width="10" height="27"/>
+    <SubTexture name="page/01/match/0000" x="210" y="1488" width="206" height="175"/>
+    <SubTexture name="page/01/sling/0000" x="692" y="182" width="225" height="178"/>
+    <SubTexture name="page/02/orphan/0000" x="681" y="541" width="225" height="176"/>
+    <SubTexture name="page/02/timer/0000" x="2" y="1842" width="206" height="175"/>
+    <SubTexture name="page/03/balloon/0000" x="692" y="2" width="225" height="178"/>
+    <SubTexture name="page/03/superbird/0000" x="2" y="1665" width="206" height="175"/>
+    <SubTexture name="page/04/egg/0000" x="692" y="362" width="225" height="177"/>
+    <SubTexture name="page/04/multiply/0000" x="2" y="1488" width="206" height="175"/>
+    <SubTexture name="page/four" x="508" y="724" width="498" height="250" frameX="-212" frameY="-177" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/one" x="2" y="782" width="482" height="262" frameX="-213" frameY="-177" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/textPage01" x="2" y="1270" width="392" height="216" frameX="-253" frameY="-194" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/textPage02" x="486" y="976" width="446" height="218" frameX="-239" frameY="-189" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/textPage03" x="2" y="1046" width="424" height="222" frameX="-236" frameY="-189" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/textPage04" x="428" y="1196" width="418" height="216" frameX="-237" frameY="-188" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/three" x="2" y="518" width="504" height="262" frameX="-211" frameY="-177" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="page/two" x="508" y="724" width="498" height="250" frameX="-212" frameY="-177" frameWidth="800" frameHeight="600"/>
+    <SubTexture name="play" x="848" y="1341" width="128" height="47"/>
+    <SubTexture name="playOver" x="848" y="1293" width="129" height="46"/>
+    <SubTexture name="practice" x="848" y="1196" width="151" height="47"/>
+    <SubTexture name="practiceOver" x="848" y="1245" width="150" height="46"/>
+    <SubTexture name="prevArrow" x="996" y="2" width="10" height="27"/>
+    <SubTexture name="prevArrowOvr" x="984" y="2" width="10" height="27"/>
+    <SubTexture name="professor" x="508" y="518" width="171" height="204"/>
+    <SubTexture name="professorWing" x="919" y="86" width="48" height="101"/>
+    <SubTexture name="slide01" x="919" y="66" width="61" height="18" frameX="-2" frameY="-1" frameWidth="65" frameHeight="20"/>
+    <SubTexture name="slide02" x="919" y="24" width="61" height="20" frameX="-2" frameY="0" frameWidth="65" frameHeight="20"/>
+    <SubTexture name="slide03" x="919" y="46" width="61" height="18" frameX="-2" frameY="-1" frameWidth="65" frameHeight="20"/>
+    <SubTexture name="slide04" x="919" y="2" width="63" height="20" frameX="0" frameY="0" frameWidth="65" frameHeight="20"/>
+</TextureAtlas>

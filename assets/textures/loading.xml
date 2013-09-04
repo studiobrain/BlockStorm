@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:7068bb9816a3a2b95f6c5a2ca2c7b545$ -->
+<TextureAtlas imagePath="loading.png">
+    <SubTexture name="A" x="76" y="77" width="28" height="30"/>
+    <SubTexture name="BG" x="2" y="2" width="217" height="58"/>
+    <SubTexture name="D" x="221" y="35" width="30" height="40"/>
+    <SubTexture name="G" x="2" y="77" width="28" height="44"/>
+    <SubTexture name="I" x="61" y="77" width="13" height="41"/>
+    <SubTexture name="L" x="32" y="77" width="27" height="41"/>
+    <SubTexture name="N" x="106" y="77" width="26" height="30"/>
+    <SubTexture name="O" x="221" y="2" width="32" height="31"/>
+    <SubTexture name="dot" x="2" y="62" width="7" height="7"/>
+</TextureAtlas>

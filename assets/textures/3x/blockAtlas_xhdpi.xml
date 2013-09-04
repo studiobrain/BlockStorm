@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:19f8474906ffdf59d40a232cfb45eddd$ -->
+<TextureAtlas imagePath="blockAtlas_xhdpi.png">
+    <SubTexture name="arrow" x="843" y="1740" width="76" height="100"/>
+    <SubTexture name="block" x="857" y="1842" width="149" height="149"/>
+    <SubTexture name="blockBW" x="843" y="1589" width="149" height="149"/>
+    <SubTexture name="blockNuclear" x="706" y="1873" width="149" height="149"/>
+    <SubTexture name="blockNuclearBW" x="555" y="1873" width="149" height="149"/>
+    <SubTexture name="cog" x="555" y="1287" width="300" height="300"/>
+    <SubTexture name="pivot" x="1939" y="2" width="98" height="98" frameX="-1" frameY="-1" frameWidth="100" frameHeight="100"/>
+    <SubTexture name="restart" x="555" y="1589" width="286" height="282" frameX="-8" frameY="-10" frameWidth="300" frameHeight="300"/>
+    <SubTexture name="xhdpi__arrowBottom" x="1008" y="1836" width="217" height="93" frameX="-1" frameY="0" frameWidth="219" frameHeight="93"/>
+    <SubTexture name="xhdpi__arrowLeft" x="1939" y="322" width="94" height="218"/>
+    <SubTexture name="xhdpi__arrowRight" x="1939" y="102" width="94" height="218"/>
+    <SubTexture name="xhdpi__arrowTop" x="921" y="1740" width="222" height="94" frameX="0" frameY="-1" frameWidth="222" frameHeight="96"/>
+    <SubTexture name="xhdpi__bg" x="2" y="2" width="720" height="1283"/>
+    <SubTexture name="xhdpi__bgGlow" x="724" y="2" width="672" height="1246" frameX="-25" frameY="-16" frameWidth="720" frameHeight="1280"/>
+    <SubTexture name="xhdpi__buttonBlue" x="1398" y="191" width="539" height="187"/>
+    <SubTexture name="xhdpi__buttonOrange" x="1398" y="2" width="539" height="187"/>
+    <SubTexture name="xhdpi__logo" x="2" y="1287" width="551" height="669"/>
+</TextureAtlas>

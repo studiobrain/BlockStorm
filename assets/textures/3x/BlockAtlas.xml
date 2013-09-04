@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:62c1e7eec5b1c9fcf3c0a37da6a1008c$ -->
+<TextureAtlas imagePath="BlockAtlas.png">
+    <SubTexture name="arrow" x="894" y="224" width="76" height="100"/>
+    <SubTexture name="block" x="592" y="275" width="149" height="149"/>
+    <SubTexture name="blockBW" x="743" y="124" width="149" height="149"/>
+    <SubTexture name="blockHazard" x="364" y="124" width="149" height="149"/>
+    <SubTexture name="blockNuclear" x="592" y="124" width="149" height="149"/>
+    <SubTexture name="buttonMenu" x="364" y="2" width="600" height="120"/>
+    <SubTexture name="cog" x="2" y="644" width="300" height="300"/>
+    <SubTexture name="pivot" x="894" y="124" width="98" height="98" frameX="-1" frameY="-1" frameWidth="100" frameHeight="100"/>
+    <SubTexture name="restart" x="304" y="644" width="286" height="282" frameX="-8" frameY="-10" frameWidth="300" frameHeight="300"/>
+    <SubTexture name="summaryBG" x="2" y="2" width="360" height="640"/>
+</TextureAtlas>
