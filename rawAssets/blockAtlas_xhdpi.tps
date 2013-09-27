@@ -146,16 +146,16 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../srcArt/Android/xhdpi/xhdpi__arrowBottom.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__arrowLeft.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__arrowRight.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__arrowTop.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__buttonBlue.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__buttonOrange.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__logo.png</filename>
             <filename>../srcArt/Android/xhdpi/xhdpi__bg.png</filename>
-            <filename>../srcArt/Android/xhdpi/xhdpi__bgGlow.png</filename>
-            <filename>HUD</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__blockBlue.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__blockGreen.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__blockOrange.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__blockPink.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__leaders.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__levels.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__logo.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__marathon.png</filename>
+            <filename>../srcArt/Android/xhdpi/xhdpi__settings.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -1,14 +1,15 @@
-package
+package 
 {
 	import com.greensock.TweenMax;
-	import com.greensock.easing.Circ;
+	import com.greensock.easing.*;
 	
-	import blocks.QuadBatcher;
+	import main.view.BlockPool;
+	import dump.QuadBatcher;
 	
-	import physics.GameSpace;
+	import main.view.physics.GameSpace;
 	
-	import scenes.Menu;
-	import scenes.Scene;
+	import main.view.scenes.Menu;
+	import main.view.scenes.Scene;
 	
 	import starling.core.Starling;
 	import starling.display.Image;
@@ -20,32 +21,43 @@ package
 	
 	public class Root extends Sprite
 	{
+		public static const STOCK_THE_POOL:String = "stock the pool";
 		public static const BACK_TO_MENU:String = "back to menu";
 		
+		public static var space:GameSpace = new GameSpace();
 		public static var starAssets:AssetManager;
+		public static var background:Image;
 		public static var logo:Image;
 		public static var activeScene:Scene;
+		public static var menu:Menu;
+		public static var blockPool:BlockPool;
 		
-		private var menu:Menu;
-		private var background:Image;
 		private var loadedBG:Image;
+		
 		
 		public function Root()
 		{
 			//this.addEventListener(Menu.START_GAME, startScene);
 			Starling.current.stage.addEventListener(Menu.SELECTED, initGame);
-			Starling.current.stage.addEventListener(Root.BACK_TO_MENU, showMenu);
+			Starling.current.stage.addEventListener(Root.STOCK_THE_POOL, stockPool);
+			//Starling.current.stage.addEventListener(Root.BACK_TO_MENU, showMenu);
+		}
+		
+		private function stockPool():void
+		{
+			Root.blockPool = new BlockPool();
+			Root.blockPool.fillThePool(100);
 		}
 		
 		public function start(background:Image, assets:AssetManager):void
 		{
 			trace("Root start()")
 			
-			this.background = background;
-			
+			Root.background = background;
 			Root.starAssets = assets;
 			
-			this.addChild(this.background);
+			addChild(Root.space);
+			addChild(Root.background);
 			
 			//trace("background.width: " + background.width);
 			
@@ -63,41 +75,47 @@ package
 					Starling.juggler.delayCall(function():void
 					{
 						progressBar.removeFromParent(true);
-						Starling.current.stage.dispatchEventWith(Root.BACK_TO_MENU, true);
+						Starling.current.stage.dispatchEventWith(Root.STOCK_THE_POOL);
+						Starling.current.stage.dispatchEventWith(Root.BACK_TO_MENU);
 						
 					}, 0.15);
 			});
 		}
 		
-		public function showMenu(event:Event):void
+		public static function showMenu(event:Event):void
 		{
-			if (!this.loadedBG) setLoadedBG();
+			trace("Root showMenu()");
 			
-			if (!this.menu)
+			if (!Root.menu)
 			{
-				this.menu = new Menu();
+				Root.menu = new Menu();
 			}
 			
-			Starling.current.stage.addChild(this.menu);
-			this.menu.visible = true;
+			TweenMax.to(Root.background, 0.25, {x:-Root.background.width * 0.25});
+			
+			
+			Starling.current.stage.addChild(Root.menu);
+			Root.menu.visible = true;
+			TweenMax.to(Root.menu, 0.25, {x:0, ease:Back.easeOut});
 		}
 		
 		private function setLoadedBG():void
 		{
 			this.loadedBG = new Image(Root.assets.getTexture(BlockStorm.prefix + "_bg"));
-			this.loadedBG.alignPivot();
-			this.loadedBG.x = BlockStorm.stageWidth * 0.5;
-			this.loadedBG.y = BlockStorm.stageHeight * 0.5;
-			this.loadedBG.width = BlockStorm.stageWidth;
-			this.loadedBG.height = BlockStorm.stageHeight;
+			this.loadedBG.scaleX = this.loadedBG.scaleY = BlockStorm.scaleFactor;
+			//this.loadedBG.alignPivot();
+			//this.loadedBG.x = BlockStorm.stageWidth * 0.5;
+			//this.loadedBG.y = BlockStorm.stageHeight * 0.5;
+			//this.loadedBG.width = BlockStorm.stageWidth * 3;
+			//this.loadedBG.height = BlockStorm.stageHeight;
 			
-			this.removeChild(this.background);
+			this.removeChild(Root.background);
 			this.addChild(this.loadedBG);
 		}
 		
 		private function showScene(mode:String):void
 		{
-			trace("showScene: " + mode);
+			trace("Root showScene: " + mode);
 			
 			if (!Root.activeScene) 
 			{
@@ -106,20 +124,23 @@ package
 			}
 			else
 			{
-				Starling.current.stage.dispatchEventWith(Scene.RESET, true, mode);
+				Starling.current.stage.dispatchEventWith(Scene.RESET, false, mode);
 			}
-			
-			Starling.current.stage.dispatchEventWith(Menu.HIDE, false);
 		}
 		
 		private function initGame(event:Event, mode:String):void
 		{
-			trace("initGame: " + mode);
-			switch (mode)
+			trace("Root initGame: " + mode);
+			
+			TweenMax.to(Root.background, 0.5, {x:-Root.background.width * 0.5, onComplete:showScene, onCompleteParams:[mode]});
+			
+			Starling.current.stage.dispatchEventWith(Menu.HIDE);
+			
+			/*switch (mode)
 			{
 				case "level": showScene("level"); break;
 				case "marathon": showScene("marathon"); break;
-			}
+			}*/
 		}
 		
 		public static function get assets():AssetManager 

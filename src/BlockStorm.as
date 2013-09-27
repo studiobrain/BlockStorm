@@ -24,7 +24,7 @@ package
 	
 	public class BlockStorm extends Sprite
 	{
-		[Embed(source="/textures/3x/xhdpi__bgPreload.png")]
+		[Embed(source="/textures/3x/xhdpi__bg.png")]
 		public static var XHDPI:Class;
 		
 		public static var stageWidth:int  = 240;
@@ -82,10 +82,10 @@ package
 			this.assets.enqueue("fonts/BS_Bahaus.png");
 			this.assets.enqueue("fonts/BS_Bahaus.fnt");
 				
-			this.background.x 			= BlockStorm.viewPort.x;
-			this.background.y 			= BlockStorm.viewPort.y;
-			this.background.width  		= BlockStorm.viewPort.width;
-			this.background.height 		= BlockStorm.viewPort.height;
+			this.background.x 			= -BlockStorm.stageWidth * 0.05;
+			//this.background.y 			= BlockStorm.viewPort.y;
+			this.background.width  		= BlockStorm.stageWidth * 2;
+			this.background.height 		= BlockStorm.stageHeight * 1.05;
 			this.background.smoothing 	= true;
 			
 			this.addChild(this.background);
@@ -163,8 +163,9 @@ package
 			var bgTexture:Texture = Texture.fromBitmap(this.background, false, false, BlockStorm.scaleFactor);
 			var backGroundImage:Image = new Image(bgTexture);
 			
-			backGroundImage.width 	= BlockStorm.stageWidth;
-			backGroundImage.height 	= BlockStorm.stageHeight;
+			backGroundImage.x 		= -BlockStorm.stageWidth * 0.05;
+			backGroundImage.width 	= BlockStorm.stageWidth * 2;
+			backGroundImage.height 	= BlockStorm.stageHeight * 1.05;
 			
 			app.start(backGroundImage, this.assets);
 			BlockStorm.blockStar.start();
